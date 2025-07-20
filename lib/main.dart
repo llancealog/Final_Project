@@ -16,16 +16,7 @@ class CampusPrintingApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Campus Printing System',
-      theme: ThemeData(
-        primaryColor: const Color(0xFFDC143C), // Crimson red
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFFDC143C),
-          primary: const Color(0xFFDC143C),
-          secondary: const Color(0xFFDC143C),
-        ),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
-      ),
+      theme: ThemeData(textTheme: GoogleFonts.poppinsTextTheme()),
       home: const LoginPage(),
       debugShowCheckedModeBanner: false,
     );
@@ -54,22 +45,18 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
       _buildHistoryContent(),
       _buildProfileContent(),
     ];
-    
-    _titles = [
-      'Find Available Printer',
-      'Print History',
-      'My Profile'
-    ];
+
+    _titles = ['Find Available Printer', 'Print History', 'My Profile'];
   }
 
   Widget _buildPrintersContent() {
     return PrintersPage(srCode: widget.srCode);
   }
-  
+
   Widget _buildHistoryContent() {
     return HistoryPage(srCode: widget.srCode);
   }
-  
+
   Widget _buildProfileContent() {
     return ProfilePage(srCode: widget.srCode);
   }
@@ -85,8 +72,8 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(_titles[_selectedIndex]),
-        backgroundColor: Colors.white,
-        foregroundColor: const Color(0xFFDC143C),
+        backgroundColor: const Color(0xFFDC143C),
+        foregroundColor: Colors.white,
         elevation: 0,
         automaticallyImplyLeading: false,
         actions: [
@@ -106,10 +93,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
         index: _selectedIndex,
         children: [
           for (final widget in _pageWidgets)
-            Container(
-              color: Colors.white,
-              child: widget,
-            ),
+            Container(color: Colors.white, child: widget),
         ],
       ),
       bottomNavigationBar: Container(
