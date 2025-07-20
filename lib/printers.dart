@@ -17,7 +17,7 @@ class _PrintersPageState extends State<PrintersPage> {
       padding: const EdgeInsets.all(16.0),
       children: [
         _buildPrinterCard(
-          name: 'Library Printer',
+          name: 'Library Printer 1',
           location: 'CEAFA Building 2nd Floor',
           status: 'Available',
           closingHours: 'Closes at 8:00 PM',

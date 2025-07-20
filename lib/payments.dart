@@ -85,7 +85,7 @@ class _PaymentsPageState extends State<PaymentsPage> {
             // Cost breakdown
             const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [Text('Pages: 8'), Text('PHP 16.00')],
+              children: [Text('Pages: 2'), Text('PHP 3.00')],
             ),
             const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -97,7 +97,7 @@ class _PaymentsPageState extends State<PaymentsPage> {
               children: [
                 Text('Total:', style: TextStyle(fontWeight: FontWeight.bold)),
                 Text(
-                  'PHP 17.00',
+                  'PHP 4.00',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
               ],
@@ -168,7 +168,7 @@ class _PaymentsPageState extends State<PaymentsPage> {
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               Text(
-                'PHP 17.00',
+                'PHP 4.00',
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -214,7 +214,7 @@ class _PaymentsPageState extends State<PaymentsPage> {
       builder: (context) => AlertDialog(
         title: const Text('Payment Successful!'),
         content: Text(
-          'Your print job has been sent to ${widget.printerName}.\n\nPayment Method: $selectedPaymentMethod\nAmount: PHP 17.00',
+          'Your print job has been sent to ${widget.printerName}.\n\nPayment Method: $selectedPaymentMethod\nAmount: PHP 4.00',
         ),
         actions: [
           ElevatedButton(

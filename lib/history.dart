@@ -11,8 +11,8 @@ class HistoryPage extends StatelessWidget {
       padding: const EdgeInsets.all(16.0),
       children: [
         _buildHistoryCard(
-          documentName: 'Activity_1.pdf',
-          printerName: 'Library Printer',
+          documentName: 'Assignment1.pdf',
+          printerName: 'Library Printer 1',
           date: 'July 15, 2025',
           pages: 5,
           cost: 'PHP10.00',
@@ -27,15 +27,15 @@ class HistoryPage extends StatelessWidget {
           status: 'Completed',
         ),
         _buildHistoryCard(
-          documentName: 'Reviewer.pdf',
-          printerName: 'CICS Printer',
+          documentName: 'Lecture_Notes.pdf',
+          printerName: 'Engineering Printer',
           date: 'July 5, 2025',
           pages: 8,
           cost: 'PHP10.00',
           status: 'Completed',
         ),
         _buildHistoryCard(
-          documentName: 'Final_Project.pdf',
+          documentName: 'Group_Project.pptx',
           printerName: 'Student Center Printer',
           date: 'June 28, 2025',
           pages: 20,
