@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'printers.dart';
+import 'main.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -18,11 +18,12 @@ class _LoginPageState extends State<LoginPage> {
 
   void _handleLogin() {
     if (_formKey.currentState!.validate()) {
-      Navigator.pushReplacement(
-        context,
+      // Use pushAndRemoveUntil to clear the navigation stack
+      Navigator.of(context).pushAndRemoveUntil(
         MaterialPageRoute(
-          builder: (context) => PrintersPage(srCode: _srCodeController.text),
+          builder: (context) => MainNavigationScreen(srCode: _srCodeController.text),
         ),
+        (route) => false, // This removes all previous routes
       );
     }
   }
@@ -30,7 +31,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false, // Prevent scrolling
+      resizeToAvoidBottomInset: false, // Prevent scrolling AAAA
       body: GestureDetector(
         // Unfocus when tapping outside fields
         onTap: () {
@@ -114,7 +115,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       const SizedBox(height: 15),
 
-                      // Password Field AAAAAAAAAAAA
+                      // Password Field
                       _CustomTextField(
                         label: 'PASSWORD',
                         controller: _passwordController,
