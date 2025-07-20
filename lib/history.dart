@@ -15,7 +15,7 @@ class HistoryPage extends StatelessWidget {
           printerName: 'Library Printer 1',
           date: 'July 15, 2025',
           pages: 5,
-          cost: '₱25.00',
+          cost: 'PHP10.00',
           status: 'Completed',
         ),
         _buildHistoryCard(
@@ -23,7 +23,7 @@ class HistoryPage extends StatelessWidget {
           printerName: 'CS Lab Printer',
           date: 'July 10, 2025',
           pages: 12,
-          cost: '₱48.00',
+          cost: 'PHP15.00',
           status: 'Completed',
         ),
         _buildHistoryCard(
@@ -31,7 +31,7 @@ class HistoryPage extends StatelessWidget {
           printerName: 'Engineering Printer',
           date: 'July 5, 2025',
           pages: 8,
-          cost: '₱48.00',
+          cost: 'PHP10.00',
           status: 'Completed',
         ),
         _buildHistoryCard(
@@ -39,7 +39,7 @@ class HistoryPage extends StatelessWidget {
           printerName: 'Student Center Printer',
           date: 'June 28, 2025',
           pages: 20,
-          cost: '₱100.00',
+          cost: 'PHP50.00',
           status: 'Completed',
         ),
       ],
